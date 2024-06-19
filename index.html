@@ -5,37 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patrick Hennessey's Personal Blog</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/form.css">
 </head>
 <body>
 
+    <header>
+        <nav>
+            <h2>Patrick Hennessey's Personal Blog</h2>
+            <button id="toggle-btn" class="header-btn">Light or Dark</button>
+        </nav>
+    </header>
     <main>
-        <header>
-            <nav>
-                <h2>Patrick Hennessey's Personal Blog</h2>
-            </nav>
-        </header>
-    </main>
-    <div class="container">
-        <section class="welcome">
-            <h1>Welcome To My Blog</h1>
-        </section>
-
-        <section class="form">
-            <div class="form-container">
-                <h2>Enter the Following Information to Create a Blog Post</h2>
-                <form id="blog-form">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required>
-                    <label for="title">Blog Title:</label>
-                    <input type="text" id="title" name="title" required>
-                    <label for="content">Blog Content:</label>
-                    <textarea id="content" name="content" required></textarea>
+        <div class="main-container">
+            <h1 id="form-heading">Fill Out the Following Form to Create a Blog Post</h1>
+                <form id="form">
+                    <div class="form-label">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-label">
+                        <label for="blog-title">Blog Title:</label>
+                        <input type="text" id="blog-title" name="blog-title" required>
+                    </div>
+                        <div class="form-label">
+                        <label for="blog-text">Blog Text:</label>
+                        <textarea id="blog-text" name="blog-text" required></textarea>
+                    </div>
                     <button type="submit" id="submit-btn">Submit</button>
+                    <p id="message"></p>
                 </form>
-            </div>
-        </section>
-    </div>
-
-
+        </div>
+    </main>
+    <script src="assets/js/form.js"></script>
+    <script src="assets/js/logic.js"></script>
 </body>
 </html>
