@@ -1,4 +1,4 @@
-const toggleButton = document.getElementById("toggle-btn")
+const toggleButton = document.getElementById("toggle-btn");
 
 function saveBlogPost(blogPost) {
     const blogPosts = JSON.parse(localStorage.getItem("blogPosts")) || [];
@@ -27,5 +27,9 @@ function displayBlogPosts() {
 
 toggleButton.addEventListener("click", function() {
     document.body.classList.toggle("dark-mode");
+    document.nav.classList.toggle("dark-mode");
+    document.input.classList.toggle("dark-mode");
+    document.textarea.classList.toggle("dark-mode");
+    document.div.classList.toggle("dark-mode");
 })
 

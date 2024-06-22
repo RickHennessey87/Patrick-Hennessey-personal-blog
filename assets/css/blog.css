@@ -1,3 +1,12 @@
+:root {
+    --primary-light-color: #AFDDE5;
+    --secondary-light-color: #0FA4AF;
+    --red: #964734;
+    --primary-dark-color: #024950;
+    --secondary-dark-color: #003135;   
+    --font-family: Arial, Helvetica, sans-serif;
+}
+
 #posts {
     display: flex;
     justify-content: center;
@@ -11,10 +20,25 @@
 .blog-post {
     text-align: center;
     margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
+    padding: 50x;
+    border: 5px double var(--red);
     border-radius: 5px;
-    background-color: #fafafa;
+    background-color: var(--secondary-light-color);
+}
+
+.dark-mode .blog-post {
+    background-color: var(--primary-dark-color);
+    color: white;
+}
+
+h2 {
+    margin-bottom: 12px;
+}
+
+p {
+    text-indent: 50px;
+    letter-spacing: 1.2px;
+    line-height:2;
 }
 
 footer {
@@ -23,7 +47,7 @@ footer {
 }
 
 footer a {
-    color: #007bff;
+    color: var(--red);
     text-decoration: none;
     font-weight: bold;
 }
@@ -32,7 +56,30 @@ footer a:hover {
     text-decoration: underline;
 }
 
-.dark-mode .posts-list div {
-    background-color: #555;
-    border-color: #666;
+
+.header-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: var(--primary-dark-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.header-btn:hover {
+    background-color: var(--secondary-dark-color);
+}
+
+.dark-mode .header-btn {
+    background-color: var(--primary-light-color);
+    color: black;
+}
+
+.dark-mode #submit-btn:hover {
+    background-color: var(--secondary-light-color);
 }

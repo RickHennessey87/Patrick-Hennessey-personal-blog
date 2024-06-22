@@ -8,7 +8,6 @@ form.addEventListener("submit", function(event) {
     const blogTitle = document.getElementById("blog-title").value;
     const blogText = document.getElementById("blog-text").value;
 
-    console.log(username, blogTitle, blogText)
 
     if (!username || !blogTitle || !blogText) {
         message.textContent = "Please complete the full form to post."

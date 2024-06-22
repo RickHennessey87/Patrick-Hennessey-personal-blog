@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #51e2f5;
-    --secondary-color: #9df9ef;
-    --tertiary-color: #edf756;
-    --fourth-color: #ffa8B6;
-    --background-color: #a28089;   
+    --primary-light-color: #AFDDE5;
+    --secondary-light-color: #0FA4AF;
+    --red: #964734;
+    --primary-dark-color: #024950;
+    --secondary-dark-color: #003135;   
     --font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -15,17 +15,17 @@
 
 body {
     font-family: var(--font-family);
-    background: var(--background-color);
+    background: var(--primary-light-color);
     transition: background-color 0.3s, color 0.3s;
 }
 
 nav {
-    background-color: #51e2f5;
+    background-color: var(--secondary-light-color);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem 1.5rem;
-    border: 5px double var(--fourth-color);
+    border: 5px double var(--red);
     position: sticky;
     justify-content: space-between;
 }
@@ -33,6 +33,22 @@ nav {
 h1 {
     text-align: center;
 }
+
+.header-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: var(--primary-dark-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+
 
 .main-container {
     display: flex;
@@ -44,34 +60,55 @@ h1 {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-light-color);
+    border: 5px double var(--red);
     border-radius: 20px;
-    box-shadow: 0 5px 15px black;
+    box-shadow: 0 5px 15px ;
+}
+
+#message {
+    color: red;
+    font-weight: 500px;
 }
 
 .dark-mode {
-    background-color: #333;
+    background-color: var(--secondary-dark-color);
     color: black;
 }
 
-.dark-mode .container {
-    background-color: #444;
+.dark-mode nav {
+    background-color: var(--primary-dark-color);
+    color: white;
 }
 
+.dark-mode .main-container {
+    background-color: var(--primary-dark-color);
+    color: white;
+}
+
+
+
 .dark-mode input, .dark-mode textarea {
-    background-color: #555;
-    color: #fff;
     border: 1px solid #666;
 }
 
-.dark-mode .btn {
-    background-color: #007bff;
+.dark-mode #submit-btn {
+    background-color: var(--primary-light-color);
+    color: black;
 }
 
-.dark-mode .btn:hover {
-    background-color: #0056b3;
+.dark-mode #submit-btn:hover {
+    background-color: var(--secondary-light-color);
 }
 
+.dark-mode .header-btn {
+    background-color: var(--primary-light-color);
+    color: black;
+}
+
+.dark-mode #submit-btn:hover {
+    background-color: var(--secondary-light-color);
+}
 
 
 
