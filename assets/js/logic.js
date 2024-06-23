@@ -40,13 +40,11 @@ function setColors(mode) {
 
 toggleButton.addEventListener("click", function() {
     const isDark = document.body.classList.toggle("dark-mode");
-    localStorage.setItem("mode", isDark ? "dark-mode" : "light");
+    localStorage.setItem("mode", isDark ? "dark" : "light");
     setColors(isDark ? "dark" : "light");
 });
 
 window.onload = function() {
-    displayBlogPosts();
-
     const savedMode = localStorage.getItem("mode") || "light";
     setColors(savedMode);
 }
