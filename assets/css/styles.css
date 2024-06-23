@@ -16,7 +16,6 @@
 body {
     font-family: var(--font-family);
     background: var(--primary-light-color);
-    transition: background-color 0.3s, color 0.3s;
 }
 
 nav {
@@ -76,6 +75,11 @@ h1 {
     color: black;
 }
 
+.dark-mode body {
+    background-color: var(--primary-dark-color);
+    color: white;
+}
+
 .dark-mode nav {
     background-color: var(--primary-dark-color);
     color: white;
@@ -89,7 +93,12 @@ h1 {
 
 
 .dark-mode input, .dark-mode textarea {
-    border: 1px solid #666;
+    border: 1px solid var(--red);
+    background-color: white;
+}
+
+.dark-mode label {
+    color: white;
 }
 
 .dark-mode #submit-btn {
@@ -110,6 +119,10 @@ h1 {
     background-color: var(--secondary-light-color);
 }
 
+.dark-mode h2 {
+    color: white;
+    background-color: var(--primary-dark-color);
+}
 
 
 

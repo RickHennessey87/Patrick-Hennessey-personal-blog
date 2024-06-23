@@ -51,10 +51,18 @@ form {
     margin-bottom: 15px;
 }
 
+.dark-mode .form-label {
+    background-color: var(--primary-dark-color);
+}
+
 label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+}
+
+.dark-mode label {
+    background-color: var(--primary-dark-color);
 }
 
 input, textarea {

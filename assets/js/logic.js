@@ -12,7 +12,7 @@ function displayBlogPosts() {
 
     blogPostsList .innerHTML = "";
 
-    for (let i = 0; i < storedBlogPosts.length; i++) {
+    for (let i = storedBlogPosts.length - 1; i >= 0; i--) {
         const postDiv = document.createElement("div");
         postDiv.className = "blog-post";
         postDiv.innerHTML = `
@@ -24,12 +24,29 @@ function displayBlogPosts() {
     }
 }
 
+function setColors(mode) {
+    const isDark = mode === "dark";
+
+    document.body.classList.toggle("dark-mode", isDark);
+
+    document.querySelector('nav').classList.toggle("dark-mode", isDark);
+    document.querySelectorAll('input').forEach(input => input.classList.toggle("dark-mode", isDark));
+    document.querySelectorAll('textarea').forEach(textarea => textarea.classList.toggle("dark-mode", isDark));
+    document.querySelectorAll('div').forEach(div => div.classList.toggle("dark-mode", isDark));
+    document.querySelectorAll('label').forEach(label => label.classList.toggle("dark-mode", isDark));
+    document.querySelectorAll('h2').forEach(h2 => h2.classList.toggle("dark-mode", isDark));
+}
+
 
 toggleButton.addEventListener("click", function() {
-    document.body.classList.toggle("dark-mode");
-    document.nav.classList.toggle("dark-mode");
-    document.input.classList.toggle("dark-mode");
-    document.textarea.classList.toggle("dark-mode");
-    document.div.classList.toggle("dark-mode");
-})
+    const isDark = document.body.classList.toggle("dark-mode");
+    localStorage.setItem("mode", isDark ? "dark-mode" : "light");
+    setColors(isDark ? "dark" : "light");
+});
 
+window.onload = function() {
+    displayBlogPosts();
+
+    const savedMode = localStorage.getItem("mode") || "light";
+    setColors(savedMode);
+}

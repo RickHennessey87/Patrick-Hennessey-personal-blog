@@ -10,10 +10,10 @@
 #posts {
     display: flex;
     justify-content: center;
-    max-width: 600px;
+    max-width: 800px;
     flex-direction: column;
     margin: 20px;
-    margin-left: 33%;
+    margin-left: 28%;
     padding: 20px;
 }
 
@@ -82,4 +82,13 @@ footer a:hover {
 
 .dark-mode #submit-btn:hover {
     background-color: var(--secondary-light-color);
+}
+
+.dark-mode body {
+    background-color: var(--primary-dark-color);
+}
+
+.dark-mode h2 {
+    color: white;
+    background-color: var(--primary-dark-color);
 }
